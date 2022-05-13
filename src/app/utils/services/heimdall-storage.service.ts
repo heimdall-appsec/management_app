@@ -18,13 +18,13 @@ export class HeimdallStorageService {
   }
 
   public storeCurrentUrl(url: string) {
-    this.storeIntoBrowser(HeimdallManagementConstants.CurrentUrl, url);
+    this.storeIntoSession(HeimdallManagementConstants.CurrentUrl, url);
   }
   public getCurrentUrl():string{
-    return this.localStorage.retrieve(HeimdallManagementConstants.CurrentUrl)
+    return this.sessionStorage.retrieve(HeimdallManagementConstants.CurrentUrl)
   }
   public clearStoredUrl(){
-    this.localStorage.clear(HeimdallManagementConstants.CurrentUrl)
+    this.sessionStorage.clear(HeimdallManagementConstants.CurrentUrl)
   }
 
   private storeIntoSession(key: HeimdallManagementConstants, value: string) {

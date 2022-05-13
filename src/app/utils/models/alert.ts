@@ -1,5 +1,5 @@
 export interface Alert {
-  id: number;
+  id?: number;
   alertType: AlertType,
   message?: string;
   timeout?: number;
@@ -12,5 +12,6 @@ export enum AlertType {
   SUCCESS,
   WARNING,
   DANGER,
-  ERROR
+  ERROR,
+  INFO
 }
